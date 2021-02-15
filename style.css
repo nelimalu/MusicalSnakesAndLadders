@@ -1,0 +1,144 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Arial";
+	color: white;
+	scroll-behavior: smooth;
+	outline: none;
+}
+
+canvas {
+	background: white;
+	border: 9px solid black;
+	display: block;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    right: 0;
+}
+
+body {
+	margin: 0;
+	background: #303030;
+	overflow: hidden;
+}
+
+nav {
+	height: 80px;
+	background: #202020;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+.logo {
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 0 2rem;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	padding: 0 1.5rem;
+}
+
+.hero-container {
+	display: grid;
+	outline: 2px bold green;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr;
+	height: 95vh;
+	padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: left;
+	align-items: flex-start;
+	padding: 0rem 1rem;
+	margin: 0 auto;
+}
+
+.user-container {
+	border-radius: 5px;
+	background: #404040;
+	padding: 10px;
+	box-shadow: 0px 0px 0px 2px #202020 inset;
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 70vh;
+	width: 25vh;
+	color: white;
+}
+
+.user-container::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.user-container::-webkit-scrollbar-track {
+  background: #202020;        /* color of the tracking area */
+}
+.user-container::-webkit-scrollbar-thumb {
+  background-color: #000;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: none;  /* creates padding around scroll thumb */
+}
+
+.user-container::-webkit-scrollbar-thumb:hover {
+  background-color: #000;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 1px solid aquamarine;  /* creates padding around scroll thumb */
+}
+
+.alert-text {
+	color: black;
+}
+
+.option {
+	transform: scale(1.6); margin-right: 10px;vertical-align: middle; margin-top: -2px;
+}
+
+#question {
+	font-size: 20px;
+}
+
+#form {
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 0px 2px #202020 inset;
+	background: #404040;
+}
+
+button {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	outline: 0;
+}
+button:hover {
+	background-color:#5cbf2a;
+}
+button:active {
+	position:relative;
+	outline: none;
+	top:1px;
+}
+button:focus {
+	outline:none;
+}

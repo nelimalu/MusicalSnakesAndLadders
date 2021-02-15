@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="Data/pawn_red.png">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Musical Snakes And Ladders</div>
+        <div class="nav-items">
+            <a>Made by Luka, David, Luca, Louis, Amir, and Gabriel</a>
+        </div>
+    </nav>
+
+    <div class="hero-container">
+        <div class="sidebar">
+            <br>
+            <button id="roll" onclick="rollDice()">Click to Roll</button>
+            <hr>
+            <div class="alert alert-primary alert-text" role="alert" id="alert1">
+                haha something broke
+            </div>
+
+            <hr>
+            <div id="form">
+                <p id="question">You haven't been asked a question yet.</p>
+                <div id='block-1' style='padding: 10px;'>
+                    <input type='radio' value='6/24' id='option-1' class="option" onclick="optionClicked(1)"/>
+                    <ans id="answer1"></ans>
+                </div>
+
+                <div id='block-2' style='padding: 10px;'>
+                    <input type='radio' value='6/24' id='option-2' class="option" onclick="optionClicked(2)"/>
+                    <ans id="answer2"></ans>
+                </div>
+
+                <div id='block-3' style='padding: 10px;'>
+                    <input type='radio' value='6/24' id='option-3' class="option" onclick="optionClicked(3)"/>
+                    <ans id="answer3"></ans>
+                </div>
+
+                <div id='block-4' style='padding: 10px;'>
+                    <input type='radio' value='6/24' id='option-4' class="option" onclick="optionClicked(4)"/>
+                    <ans id="answer4"></ans>
+                </div>
+            </div>
+        </div>
+
+
+        <canvas></canvas>
+        <script src="index.js"></script>
+
+        <div class="sidebar">
+            <div class="user-container" id="user-box">
+                <p id="users"></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
