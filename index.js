@@ -16,8 +16,11 @@ const PIXELWIDTH = BOARDWIDTH / grid;
 const PIXELHEIGHT = BOARDHEIGHT / grid;
 const LADDERDIST = 20;
 const VEL = 5;
-const QUESTIONS = ["1 + 74;741;74;742;75",
-				   "do gamers think alike;apples;sometimes;never;always"];
+const QUESTIONS = ["What is the opposite of conjunct music?;disjunct;antijunct;unjunct;dejunct",
+				   "What does Mezzo Forte (mf) mean?;Moderately loud;Moderately quiet;Very loud;Very quiet",
+				   "Which element of music best describes how 'high' or 'low' notes sound?;Pitch;Rhythm;Texture;Timbre",
+				   "How fast is 60 bpm?;1 beat per second;2 beats per second;half a beat per second;4 beats per second",
+				   "What is a polyphonic song?;A song with two or more melodic lines;A song with one melodic line;A melody supported by harmony;A harmony with no melody"];
 
 var localPlayer = "";
 var users = {};
