@@ -16,11 +16,24 @@ const PIXELWIDTH = BOARDWIDTH / grid;
 const PIXELHEIGHT = BOARDHEIGHT / grid;
 const LADDERDIST = 20;
 const VEL = 5;
-const QUESTIONS = ["What is the opposite of conjunct music?;disjunct;antijunct;unjunct;dejunct",
-				   "What does Mezzo Forte (mf) mean?;Moderately loud;Moderately quiet;Very loud;Very quiet",
-				   "Which element of music best describes how 'high' or 'low' notes sound?;Pitch;Rhythm;Texture;Timbre",
-				   "How fast is 60 bpm?;1 beat per second;2 beats per second;half a beat per second;4 beats per second",
-				   "What is a polyphonic song?;A song with two or more melodic lines;A song with one melodic line;A melody supported by harmony;A harmony with no melody"];
+const QUESTIONS = ["What is the opposite of conjunct music? (Luka);disjunct;antijunct;unjunct;dejunct",
+				   "What does Mezzo Forte (mf) mean? (Luka);Moderately loud;Moderately quiet;Very loud;Very quiet",
+				   "Which element of music best describes how 'high' or 'low' notes sound? (Luka);Pitch;Rhythm;Texture;Timbre",
+				   "How fast is 60 bpm? (Luka);1 beat per second;2 beats per second;half a beat per second;4 beats per second",
+				   "What is a polyphonic song? (Luka);A song with two or more melodic lines;A song with one melodic line;A melody supported by harmony;A harmony with no melody",
+				   
+				   "What is timbre? (Luca);The pitch quality of a note.;How loud you play.;How long you hold a note.;The name of a note.",
+				   "What is the order of the treble clef notes? (Luca);E,F,G,A,B,C,D,E,F;E,E,G,A,B,C,D,E,F;E,F,G,A,B,C,D,E,E;E,G,F,A,B,D,C,E,F",
+				   "What what does a Tie do? (Luca);Connects two notes of the same pitch;Make’s a note be longer by half its value.;Connects a bar of notes.;Connects three notes.",
+				   "How long do you hold a dotted quarter note for? (Luca);1.5 beats.;Three beats.;Two beats.;0.5 beats",
+				   "What does a dot beside a note do? (Luca);Adds half the length of the note to the total length.;Doubles the note length.;Adds quarter the length of the note to the total length.;Makes the note half the length."
+				   
+				   "_____ is the sound when 2 or more notes are played at the same time (David);Harmony;Melody;Rhythm;Meter",
+				   "How many different elements of music are there (David);7;10;5;3",
+				   "_____ is the first string instrument ever made that’s recorded;Lyres of Ur;Zeusaphone;Pikasso guitar;Cello horn",
+				   "What is this sign called 𝄻 (David);Whole Rest;Half Rest;Staff;Measure",
+				   "How many different notes are there in music (David);12;10;7;15"
+				   ];
 
 var localPlayer = "";
 var users = {};
