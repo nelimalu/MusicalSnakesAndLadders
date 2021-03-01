@@ -46,7 +46,10 @@ async def connect(websocket, path):
                 turn_user = local_username
                 turn_index = user_order.index(local_username)
 
-            await websocket.send("PTUR" + json.dumps(players[turn_user]))
+            try:
+                await websocket.send("PTUR" + json.dumps(players[turn_user]))
+            except:
+                pass
 
         elif category == "MOVE":
             player = json.loads(data)

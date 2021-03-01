@@ -3,7 +3,6 @@ var socket = new WebSocket("ws://99.241.147.138:1345");
 
 canvas.width = 600;
 canvas.height = 600;
-// four ladders five snakes
 
 var c = canvas.getContext('2d');
 
@@ -21,18 +20,25 @@ const QUESTIONS = ["What is the opposite of conjunct music? (Luka);disjunct;anti
 				   "Which element of music best describes how 'high' or 'low' notes sound? (Luka);Pitch;Rhythm;Texture;Timbre",
 				   "How fast is 60 bpm? (Luka);1 beat per second;2 beats per second;half a beat per second;4 beats per second",
 				   "What is a polyphonic song? (Luka);A song with two or more melodic lines;A song with one melodic line;A melody supported by harmony;A harmony with no melody",
-				   
+
 				   "What is timbre? (Luca);The pitch quality of a note.;How loud you play.;How long you hold a note.;The name of a note.",
 				   "What is the order of the treble clef notes? (Luca);E,F,G,A,B,C,D,E,F;E,E,G,A,B,C,D,E,F;E,F,G,A,B,C,D,E,E;E,G,F,A,B,D,C,E,F",
-				   "What what does a Tie do? (Luca);Connects two notes of the same pitch;Make’s a note be longer by half its value.;Connects a bar of notes.;Connects three notes.",
+				   "What does a Tie do? (Luca);Connects two notes of the same pitch;Make’s a note be longer by half its value.;Connects a bar of notes.;Connects three notes.",
 				   "How long do you hold a dotted quarter note for? (Luca);1.5 beats.;Three beats.;Two beats.;0.5 beats",
-				   "What does a dot beside a note do? (Luca);Adds half the length of the note to the total length.;Doubles the note length.;Adds quarter the length of the note to the total length.;Makes the note half the length."
-				   
+				   "What does a dot beside a note do? (Luca);Adds half the length of the note to the total length.;Doubles the note length.;Adds quarter the length of the note to the total length.;Makes the note half the length.",
+
 				   "_____ is the sound when 2 or more notes are played at the same time (David);Harmony;Melody;Rhythm;Meter",
 				   "How many different elements of music are there (David);7;10;5;3",
 				   "_____ is the first string instrument ever made that’s recorded;Lyres of Ur;Zeusaphone;Pikasso guitar;Cello horn",
 				   "What is this sign called 𝄻 (David);Whole Rest;Half Rest;Staff;Measure",
-				   "How many different notes are there in music (David);12;10;7;15"
+				   "How many different notes are there in music (David);12;10;7;15",
+
+				   "What is the smallest note (Gabriel);256th note;128th note;eight note;1  6th note",
+				   "How many beats does a whole note last (Gabriel);4 beats;2 beats;1 beat;half a beat",
+
+				   "What is another word for melody? (Louis);Tune;Rhythm;Dictation;Melody's just melody, duh",
+				   "What is the word that conveys the length of a note? (Louis);Note value;Overtone;Form;Rhythm",
+				   "If you were to portray soft, sad music, what would you use? (Louis);Mezzo Piano;Mezzo Forte;Fortissimo;Fortississimo"
 				   ];
 
 var localPlayer = "";
@@ -229,8 +235,8 @@ function get_floor(square) {
 	return Math.floor(square / grid) + 1;
 }
 
-function degToRad(d)  {  
-    return d * 0.01745;  
+function degToRad(d)  {
+    return d * 0.01745;
 }
 
 function rollDice() {
@@ -258,7 +264,7 @@ function find_angle(pos, vertex) {
     try {
         var angle = Math.atan((sY - pos[1]) / (sX - pos[0]))
     } catch (err) {
-        var angle = (math.pi / 2)
+        var angle = (Math.pi / 2)
     }
 
     if (pos[1] <= sY && pos[0] >= sX) {
@@ -303,7 +309,7 @@ function Pixel(x, y, width, height, number) {
 		c.strokeRect(this.x, this.y, this.width, this.height);
 		c.font = "30px Arial";
 		var textwidth = c.measureText(this.number.toString()).width
-		c.fillText(this.number.toString(), (this.x + width / 2) - (textwidth / 2), this.y + this.width / 2 + 15); 
+		c.fillText(this.number.toString(), (this.x + width / 2) - (textwidth / 2), this.y + this.width / 2 + 15);
 	}
 }
 
@@ -350,10 +356,10 @@ function Player(sprite) {
 	this.update = function() {
 		this.floor = get_floor(this.square);
 		var temp_goal_floor = get_floor(this.temp_floor);
-		
+
 		if (this.perm_goal != this.square) {
-			
-			if (this.square >= 100) {
+
+			if (this.square >= 99) {
 				win();
 			} else {
 
@@ -480,7 +486,7 @@ function Incline(start, end, sprite, type) {
 		y2 = pixels[this.end - 1].y + PIXELHEIGHT / 2 - LADDERDIST / 2;
 
 		//draw_line(x1, y1, x2, y2, "blue", 5);
-		
+
 		sprite.draw(this.x + PIXELWIDTH / 2, this.y + PIXELWIDTH / 2);
 	}
 }
