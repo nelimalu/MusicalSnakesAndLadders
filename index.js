@@ -38,7 +38,8 @@ const QUESTIONS = ["What is the opposite of conjunct music? (Luka);disjunct;anti
 
 				   "What is another word for melody? (Louis);Tune;Rhythm;Dictation;Melody's just melody, duh",
 				   "What is the word that conveys the length of a note? (Louis);Note value;Overtone;Form;Rhythm",
-				   "If you were to portray soft, sad music, what would you use? (Louis);Mezzo Piano;Mezzo Forte;Fortissimo;Fortississimo"
+				   "If you were to portray soft, sad music, what would you use? (Louis);Mezzo Piano;Mezzo Forte;Fortissimo;Fortississimo",
+				   "What is texture a mix of? (Louis);Tempo melodic;Form and timbre;Form and dynamics.;Dynamics and pitch"
 				   ];
 
 var localPlayer = "";
